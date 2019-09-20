@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="Technical Documentation - FCC Project" content="Technical Documentation - FCC Project" />
+    <link href="index.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <title>Technical Documentation - FCC Project</title>
+</head>
+
+<body>
+    <div class="menu"><span class="menu__inner"></span></div>
+    <nav id="navbar" class="navbar">
+        <header>Javascript</header>
+        <ul>
+            <li>
+                <a class="nav-link" href="#Introduction">Introduction</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Data_Types">Data Types</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Variables">Variables</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Type_&_Equality">Type & Equality</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Functions">Functions</a>
+            </li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section id="Introduction" class="main-section">
+            <header>Introduction</header>
+            <article>
+                <p>
+                    JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.
+                </p>
+                <p>
+                    Do not confuse JavaScript with the Java programming language. Both "Java" and "JavaScript" are trademarks or registered trademarks of Oracle in the U.S. and other countries. However, the two programming languages have very different syntax, semantics, and uses.
+                </p>
+                <p>Priting 'Hello World!' is as simple as:
+                    <code>
+              console.log('Hello World!');
+            </code>
+                    <p>
+            </article>
+        </section>
+        <section id="Data_Types" class="main-section">
+            <header>Data Types</header>
+            <article>
+                <p>
+                    JavaScript is a loosely typed or a dynamic language. Variables in JavaScript are not directly associated with any particular value type, and any variable can be assigned (and re-assigned) values of all types:
+                    <br>
+                    <code>
+              var foo = 42;    // foo is now a number <br>
+              foo     = 'bar'; // foo is now a string <br>
+              foo     = true;  // foo is now a boolean
+            </code>
+                </p>
+                <p>
+                    Seven data types that are primitives:
+                    <ul>
+                        <li>Boolean (true / false)</li>
+                        <li>null (A special keyword denoting a null value)</li>
+                        <li>undefined (Properties that are declared by unintialized)</li>
+                        <li>Number (42, 5.2)</li>
+                        <li>BigInt (Large numbers)</li>
+                        <li>String ('I am a string')</li>
+                        <li>Symbol (A datatype whose instances are unique and immutable)</li>
+                    </ul>
+                    and Object (A key:value pair)
+
+                </p>
+            </article>
+        </section>
+        <section id="Variables" class="main-section">
+            <header>Variables</header>
+            <article>
+                <p>
+                    A variable is a named location for storing a value. That way an unpredictable value can be accessed through a predetermined name.
+                    <code>
+              var x = 3;
+              y = 7; // Global scope without var
+            </code>
+                </p>
+            </article>
+        </section>
+        <section id="Type_&_Equality" class="main-section">
+            <header>Type & Equality</header>
+            <article>
+                <p>
+                    double equals (==) will perform a type conversion when comparing two things, and will handle NaN, -0, and +0 specially to conform to IEEE 754 (so NaN != NaN, and -0 == +0); triple equals (===) will do the same comparison as double equals (including the special handling for NaN, -0, and +0) but without type conversion; if the types differ, false is returned.
+                </p>
+                <code>
+            var num = 0;<br>
+            var obj = new String('0');<br>
+            var str = '0';<br>
+
+console.log(num === num); // true<br>
+console.log(obj === obj); // true<br>
+console.log(str === str); // true<br>
+
+console.log(num === obj); // false<br>
+console.log(num === str); // false<br>
+console.log(obj === str); // false<br>
+console.log(null === undefined); // false<br>
+console.log(obj === null); // false<br>
+console.log(obj === undefined); // false<br>
+          </code>
+            </article>
+        </section>
+        <section id="Functions" class="main-section">
+            <header>Functions</header>
+            <article>
+                <p>
+                    In JavaScript, functions are first-class objects, because they can have properties and methods just like any other object. What distinguishes them from other objects is that functions can be called. In brief, they are Function objects.
+                </p>
+                <code>
+            function square(number) {<br>
+            &nbsp;&nbsp;return number * number;<br>
+}
+          </code>
+                <p>
+                    The function square takes one parameter, called number. The function consists of one statement that says to return the parameter of the function (that is, number) multiplied by itself. The statement return specifies the value returned by the function:
+                </p>
+                <code>
+            return number * number;
+          </code>
+            </article>
+        </section>
+    </main>
+    <script src="./index.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" async></script>
+</body>
+
+</html>
